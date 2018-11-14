@@ -1,7 +1,7 @@
 {
   "name": "my-electron",
-  "productName": "My Electron",
-  "description": "Electron utils",
+  "productName": "Front Utils",
+  "description": "Electron frount utils",
   "version": "0.0.0",
   "private": true,
   "author": "hankaibo",
@@ -18,7 +18,22 @@
     "directories": {
       "buildResources": "resources"
     },
-    "publish": null
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://localhost/"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    }
   },
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
@@ -31,7 +46,9 @@
     "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder"
   },
   "dependencies": {
-    "fs-jetpack": "^2.2.0"
+    "electron-updater": "^3.2.3",
+    "fs-jetpack": "^2.2.0",
+    "log4js": "^3.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
