@@ -1,8 +1,8 @@
 {
   "name": "my-electron",
-  "productName": "Front Utils",
-  "description": "Electron frount utils",
-  "version": "0.0.0",
+  "productName": "FET",
+  "description": "Front-end tool based on electron",
+  "version": "0.0.1",
   "private": true,
   "author": "hankaibo",
   "copyright": "© 2018, hankaibo",
