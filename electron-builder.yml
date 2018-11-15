@@ -1,0 +1,32 @@
+productName: FU
+appId: cn.mypandora.electron-utils
+
+# Package electron code into a asar archive. Set to false to debug issues.
+asar: true
+
+files:
+  - 'app/**/*'
+  - 'node_modules/**/*'
+  - 'package.json'
+
+# Windows configuration
+win:
+  target:
+    - target: nsis
+      arch: ia32
+
+# Config for the windows installer
+nsis:
+  oneClick: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: 'xxxx'
+
+directories:
+  buildResources: resources
+
+publish:
+  provider: generic
+  url: 'http://localhost/'
