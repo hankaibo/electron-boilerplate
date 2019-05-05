@@ -1,0 +1,23 @@
+appId: cn.mypandora.electron.utils
+productName: fe
+files:
+  - 'app/**/*'
+  - 'node_modules/**/*'
+  - package.json
+directories:
+  buildResources: resources
+
+win:
+  target:
+    - nsis
+
+mac:
+  target:
+    - dmg
+
+nsis:
+  menuCategory: true
+
+publish:
+  provider: generic
+  url: http://localhost/
