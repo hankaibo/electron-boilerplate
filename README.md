@@ -1,6 +1,6 @@
-# electron-utils
+# electron-tool
 
-A electron utils for [Electron runtime](http://electron.atom.io). Tested on Windows, macOS and Linux.  
+A electron tool for [Electron runtime](http://electron.atom.io). Tested on Windows, macOS and Linux.  
 
 # Quick start
 
