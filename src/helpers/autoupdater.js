@@ -15,7 +15,10 @@ const sendStatusToWindow = (win, text) => {
 };
 
 export default win => {
-  autoUpdater.setFeedURL('http://localhost/');
+  autoUpdater.on('error', err => {
+    logger.debug(err);
+    sendStatusToWindow(win, 'Error in auto-updater. ' + err);
+  });
   autoUpdater.on('checking-for-update', () => {
     sendStatusToWindow(win, 'Checking for update...');
   });
@@ -26,10 +29,6 @@ export default win => {
   autoUpdater.on('update-not-available', info => {
     logger.debug(info);
     sendStatusToWindow(win, 'Update not available.');
-  });
-  autoUpdater.on('error', err => {
-    logger.debug(err);
-    sendStatusToWindow(win, 'Error in auto-updater. ' + err);
   });
   autoUpdater.on('download-progress', progressObj => {
     let log_message = 'Download speed: ' + progressObj.bytesPerSecond;
@@ -43,7 +42,7 @@ export default win => {
     ipcMain.on('isUpdateNow', (event, args) => {
       logger.debug(arguments);
       logger.debug('start updateing ...');
-      // autoUpdater.quitAndInstall();
+      autoUpdater.quitAndInstall();
     });
     win.webContents.send('isUpdateNow');
   });

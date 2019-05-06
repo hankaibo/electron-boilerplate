@@ -2,7 +2,7 @@
   "name": "my-electron",
   "productName": "e-stone",
   "description": "A front-end tool base on electron",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "author": "hankaibo",
   "copyright": "© 2019, hankaibo",

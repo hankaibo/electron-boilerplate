@@ -1,5 +1,5 @@
 appId: cn.mypandora.electron.tool
-productName: fe
+productName: e-stone
 files:
   - 'app/**/*'
   - 'node_modules/**/*'
@@ -20,4 +20,4 @@ nsis:
 
 publish:
   provider: generic
-  url: http://localhost/html
+  url: http://localhost/
