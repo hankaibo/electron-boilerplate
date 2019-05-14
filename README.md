@@ -1,6 +1,6 @@
-# electron-utils
+# electron-tool
 
-A electron utils for [Electron runtime](http://electron.atom.io). Tested on Windows, macOS and Linux.  
+A electron tool for [Electron runtime](http://electron.atom.io). Tested on Windows, macOS and Linux.  
 
 # Quick start
 
@@ -54,7 +54,7 @@ console.log(env.name);
 To do so edit `package.json`:
 ```json
 "devDependencies": {
-  "electron": "3.0.9"
+  "electron": "4.2.0"
 }
 ```
 *Side note:* [Electron authors recommend](http://electron.atom.io/docs/tutorial/electron-versioning/) to use fixed version here.

@@ -1,32 +1,36 @@
-productName: FET
-appId: cn.mypandora.electron-utils
-
-# Package electron code into a asar archive. Set to false to debug issues.
-asar: true
-
-files:
-  - 'app/**/*'
-  - 'node_modules/**/*'
-  - 'package.json'
-
-# Windows configuration
-win:
-  target:
-    - target: nsis
-      arch: ia32
-
-# Config for the windows installer
-nsis:
-  oneClick: false
-  allowElevation: true
-  allowToChangeInstallationDirectory: true
-  createDesktopShortcut: true
-  createStartMenuShortcut: true
-  shortcutName: 'xxxx'
+appId: com.electron.e-stone
+productName: e-stone
+copyright: 'Copyright © 2019 hankaibo'
 
 directories:
   buildResources: resources
 
+files:
+  - 'app/**/*'
+  - 'node_modules/**/*'
+  - package.json
+
+mac:
+  category: public.app-category.developer-tool
+  target:
+    - dmg
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+
+nsis:
+  oneClick: false
+  perMachine: true
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: true
+  uninstallDisplayName: 'Uninstall ${productName} ${version}'
+  menuCategory: true
+
 publish:
   provider: generic
-  url: 'http://localhost/'
+  url: http://localhost/
