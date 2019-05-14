@@ -1,3 +1,4 @@
+import './stylesheets/normalize.css';
 import './stylesheets/main.css';
 
 // Small helpers you might want to keep
@@ -26,20 +27,20 @@ const osMap = {
   linux: 'Linux'
 };
 
-document.querySelector('#app').style.display = 'block';
-document.querySelector('#greet').innerHTML = greet();
-document.querySelector('#os').innerHTML = osMap[process.platform];
-document.querySelector('#author').innerHTML = manifest.author;
-document.querySelector('#env').innerHTML = env.name;
-document.querySelector('#electron-version').innerHTML = process.versions.electron;
+// document.querySelector('#app').style.display = 'block';
+// document.querySelector('#greet').innerHTML = greet();
+// document.querySelector('#os').innerHTML = osMap[process.platform];
+// document.querySelector('#author').innerHTML = manifest.author;
+// document.querySelector('#env').innerHTML = env.name;
+// document.querySelector('#electron-version').innerHTML = process.versions.electron;
 
-ipcRenderer.send('checkForUpdate');
-ipcRenderer.on('message', (event, text) => {
-  console.log(text, arguments);
-});
-ipcRenderer.on('downloadProgress', (event, progressObj) => {
-  console.log('downloadProgress', progressObj);
-});
-ipcRenderer.on('isUpdateNow', () => {
-  ipcRenderer.send('isUpdateNow');
-});
+// ipcRenderer.send('checkForUpdate');
+// ipcRenderer.on('message', (event, text) => {
+//   console.log(text, arguments);
+// });
+// ipcRenderer.on('downloadProgress', (event, progressObj) => {
+//   console.log('downloadProgress', progressObj);
+// });
+// ipcRenderer.on('isUpdateNow', () => {
+//   ipcRenderer.send('isUpdateNow');
+// });

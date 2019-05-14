@@ -1,27 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Electron Tool</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>FET</title>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <aside class="sidebar">
+        <header class="header">
+          <h1 class="app-title">
+            <span class="primary">foo</span>
+            <span class="secondary">bar</span>
+          </h1>
+        </header>
+        <nav class="navigation">
+          <div class="categorized-nav is-shown">
+            <div class="nav-item">
+              <div class="nav-category">
+                <svg class="nav-icon"><use href="images/symbols.svg#shelf-symbol"></use></svg>HTML
+              </div>
+              <div class="nav-button">压缩html</div>
+              <div class="nav-button">html转义字符</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-category">
+                <svg class="nav-icon"><use href="images/symbols.svg#shelf-symbol"></use></svg>CSS
+              </div>
+              <div class="nav-button">压缩css</div>
+              <div class="nav-button">图片转base64</div>
+              <div class="nav-button">精灵图</div>
+              <div class="nav-button">颜色转换</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-category">
+                <svg class="nav-icon"><use href="images/symbols.svg#shelf-symbol"></use></svg>JS
+              </div>
+              <div class="nav-button">压缩js</div>
+              <div class="nav-button">压缩json</div>
+              <div class="nav-button">js运行器</div>
+              <div class="nav-button">正则表达式</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-category">
+                <svg class="nav-icon"><use href="images/symbols.svg#shelf-symbol"></use></svg>IMAGE
+              </div>
+              <div class="nav-button">压缩图片</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-category">
+                <svg class="nav-icon"><use href="images/symbols.svg#shelf-symbol"></use></svg>通用
+              </div>
+              <div class="nav-button">格式化</div>
+              <div class="nav-button">静态服务器</div>
+              <div class="nav-button">二维码生成</div>
+              <div class="nav-button">加密/解密</div>
+              <div class="nav-button">markdown编译器</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-category">
+                <svg class="nav-icon"><use href="images/symbols.svg#shelf-symbol"></use></svg>系统
+              </div>
+              <div class="nav-button">信息</div>
+              <div class="nav-button">端口扫描</div>
+              <div class="nav-button">css names</div>
+              <div class="nav-button">css names</div>
+            </div>
+          </div>
+        </nav>
+        <footer class="footer" title="foobar"></footer>
+      </aside>
+      <main class="main"></main>
+    </div>
 
-  <div id="app" class="container" style="display: none;">
-    <h1 id="greet"></h1>
-    <p>
-      Welcome to <a href="http://electron.atom.io" class="js-external-link">Electron</a> app running on this <strong id="os"></strong> machine.
-    </p>
-    <p>
-      App author: <strong id="author"></strong>
-    </p>
-    <p>
-      Environment: <strong id="env"></strong>
-    </p>
-    <p>
-      Electron version: <strong id="electron-version"></strong>
-    </p>
-  </div>
-
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
