@@ -1,4 +1,4 @@
-# electron-tool
+# e-stone
 
 A electron tool for [Electron runtime](http://electron.atom.io). Tested on Windows, macOS and Linux.  
 

@@ -17,8 +17,8 @@ import autoupdater from './helpers/autoupdater';
 // in config/env_xxx.json file.
 import env from 'env';
 
-// log4js.configure(log4jsConfig);
-// const logger = log4js.getLogger('background.js');
+log4js.configure(log4jsConfig);
+const logger = log4js.getLogger('background.js');
 
 const setApplicationMenu = () => {
   const menus = [editMenuTemplate];
