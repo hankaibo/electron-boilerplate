@@ -6,8 +6,8 @@ A electron tool for [Electron runtime](http://electron.atom.io). Tested on Windo
 
 Make sure you have [Node.js](https://nodejs.org) installed, then type the following commands known to every Node developer...
 ```
-git clone https://github.com/hankaibo/myelectron.git
-cd myelectron
+git clone https://github.com/hankaibo/electron-boilerplate.git
+cd electron-boilerplate
 npm install
 npm start
 ```
